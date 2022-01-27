@@ -1,0 +1,7 @@
+# Write down your multi-threading designs here!
+for every train and passenger, create a thread, add them into a list.
+In the thread, I first make an infinite loop so that the thread can run all the time
+until the end check success; in the loop, call lock(), then check if the thread can run,
+if false, call await(), if true, make the event and the log, change the state of mbta;
+then call signalAll(), unlock();
+run all the thread in the list, then check end every 2 seconds.
